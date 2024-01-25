@@ -11,7 +11,7 @@ public interface OrderService {
 
     List<Order> readAll();
 
-    Order read(Long id);
+    Order findById(Long id);
 
     void update(Long id, OrderForm form);
 

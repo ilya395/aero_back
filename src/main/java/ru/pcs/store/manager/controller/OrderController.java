@@ -30,7 +30,7 @@ public class OrderController {
 
     @GetMapping(value = "/orders/{id}")
     public String read(Model model, @PathVariable(name = "id") Long id) {
-        Order order = orderService.read(id);
+        Order order = orderService.findById(id);
         model.addAttribute("order", order);
         return "order";
     }
